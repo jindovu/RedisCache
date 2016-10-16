@@ -1,0 +1,31 @@
+﻿@model List<RedisCache.ViewModels.TestViewModel>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+   
+</div>
+
+<div class="row">
+    <table class="table">
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Content</th>
+            <th>Date</th>
+        </tr>
+        <tbody>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.No</td>
+                    <td>@item.Name</td>
+                    <td>@item.Content</td>
+                    <td>@item.Date</td>
+                </tr>
+            }
+        }
+      
+        </tbody>
+    </table>
+</div>
